@@ -14,7 +14,8 @@ const EditBookModal = ({ showModal, setShowModal, fetchBooks, bookId }) => {
     if (bookId) {
       const fetchBook = async () => {
         try {
-          const response = await axios.get(`http://localhost:5555/api/v1/books/${bookId}`);
+          // const response = await axios.get(`http://localhost:5555/api/v1/books/${bookId}`);
+          const response = await axios.get(`https://bookstorebackend-kjzc.onrender.com/api/v1/books/${bookId}`);
           setSingleBook(response.data);
         } catch (error) {
           console.log('Error fetching book:', error);
@@ -39,7 +40,8 @@ const EditBookModal = ({ showModal, setShowModal, fetchBooks, bookId }) => {
       }
 
       const response = await axios.put(
-        `http://localhost:5555/api/v1/books/${bookId}`,
+        // `http://localhost:5555/api/v1/books/${bookId}`,
+        `https://bookstorebackend-kjzc.onrender.com/api/v1/books/${bookId}`,
         formData,
         {
           headers: {

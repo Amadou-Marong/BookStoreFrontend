@@ -10,7 +10,8 @@ const ConfirmModal = ({ showModal, setShowModal, fetchBooks, bookId }) => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:5555/api/v1/books/${bookId}`)
+      // await axios.delete(`http://localhost:5555/api/v1/books/${bookId}`)
+      await axios.delete(`https://bookstorebackend-kjzc.onrender.com/api/v1/books/${bookId}`)
       fetchBooks()
       setShowModal(false)
     } catch (error) {

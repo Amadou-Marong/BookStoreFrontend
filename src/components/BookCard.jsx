@@ -9,7 +9,8 @@ const BookCard = ({ book, fetchBooks }) => {
   const [selectedBookId, setSelectedBookId] = useState(null);
 
   // Backend base URL
-  const baseURL = "http://localhost:5555/";
+  // const baseURL = "http://localhost:5555/";
+  const baseURL = "https://bookstorebackend-kjzc.onrender.com/";
 
   const handleEdit = (book) => {
     setSelectedBookId(book._id);

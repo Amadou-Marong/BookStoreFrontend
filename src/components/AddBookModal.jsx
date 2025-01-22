@@ -23,7 +23,8 @@ const AddBookModal = ({ showModal, setShowModal, fetchBooks }) => {
     if (image) formData.append("image", image);
 
     try {
-      await axios.post("http://localhost:5555/api/v1/books", formData, {
+      // await axios.post("http://localhost:5555/api/v1/books", formData, {
+      await axios.post("https://bookstorebackend-kjzc.onrender.com/api/v1/books", formData, {
         headers: {
           "Content-Type": "multipart/form-data", // Important for file uploads
         },

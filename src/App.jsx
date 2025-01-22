@@ -21,7 +21,8 @@ function App() {
 
   const fetchBooks = async () => {
       try {
-        const response = await axios.get('http://localhost:5555/api/v1/books')
+        // const response = await axios.get('http://localhost:5555/api/v1/books')
+        const response = await axios.get('https://bookstorebackend-kjzc.onrender.com/api/v1/books')
         setBooks(response.data)
       } catch (error) {
         console.log('Error fetching books:', error);
